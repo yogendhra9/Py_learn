@@ -1,1 +1,1 @@
-This repo contains some basics of python that is going to be useful for dataengineering.
+This repo contains some basics of python that is going to be useful for data engineering.

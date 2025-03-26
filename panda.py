@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 # Load the dataset
 df = pd.read_csv(r"C:\Users\yogen\Downloads\iris.csv")
 
@@ -13,6 +13,10 @@ print(f"Petal Length: {df['PetalLengthCm'].mean():.2f}")
 # Group by species for SepalLengthCm
 print("\nAverage Sepal Length by Species:")
 k = df.groupby("Species")["SepalLengthCm"].mean()
+k.plot(kind="bar", title="Average Sepal Length by Species", color=['#FF9999', '#66B2FF', '#99FF99'])
+plt.ylabel("Sepal Length (cm)")
+plt.show()
+input("Press Enter to close...")
 print(k)
 
 # Filter petal length > 6
